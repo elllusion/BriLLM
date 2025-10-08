@@ -1,0 +1,53 @@
+name: llm-train
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - tqdm
+  - scikit-learn
+  - matplotlib
+  - jupyterlab
+  - pytorch>=2.3
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1  # GPU runners 使用
+  - cudatoolkit=12.1   # 对应 CUDA runtime
+
+  # NLP & LLM
+  - tokenizers
+  - sentencepiece
+  - datasets
+  - transformers
+  - accelerate
+  - bitsandbytes
+  - peft
+  - deepspeed
+  - flash-attn
+  - evaluate
+
+  # 训练辅助
+  - tensorboard
+  - wandb
+  - psutil
+  - rich
+  - yaml
+
+  # 其他系统工具
+  - git
+  - cmake
+  - ninja
+
+  - pip:
+      - huggingface-hub
+      - einops
+      - xformers
+      - safetensors
+      - tiktoken
+      - optimum
+      - trl
